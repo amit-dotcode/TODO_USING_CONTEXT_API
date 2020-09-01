@@ -12,8 +12,8 @@ const App = () => {
     const addNote = (note)=>{
         // alert("clicked");
         setAddItem((oldData)=>{
-            return[...oldData, note];    
-        });	
+            return [...oldData, note]    
+        })	
     };
 
     const onDelete = (id)=>{

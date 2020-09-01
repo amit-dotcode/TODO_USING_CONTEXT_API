@@ -11,19 +11,22 @@ body {
 
 .header{
   background-color:#00d8ff;
-  color:#fff;
+  color:#574646;
   padding:20px 10px;
 
 }
+.logoicon{font-size: 30px;}
 .header h3{
-  color:#fff;
-  margin:0;
+color:#574646;
+margin:0;
+display: flex;
+align-items: center;
 }
 
 footer{text-align: center;}
 
 .main_note{
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 4px;
   /* border: 1px solid #e0d8d8; */
   width: 400px;

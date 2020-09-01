@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { FaRegLightbulb } from 'react-icons/fa';
+import { BsFileRichtext } from 'react-icons/bs';
 
 const Header = () => {
     return (
        <>
         <div className = 'header'>
-            <h3><FaRegLightbulb /> Google Keep App </h3>
+            <h3><BsFileRichtext className="logoicon"/> React Note App </h3>
         </div>
        </>
     );
