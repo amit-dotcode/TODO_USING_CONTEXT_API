@@ -1,55 +1,32 @@
-import React, {useState} from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import CreateNote from './CreateNote';
-import Note from './Note';
-import Filter from './Filter';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style/index.css';
+import Header from "./component/Header";
+import Tabledata from './component/Tabledata';
+import {Provider} from 'react-redux';
+import store from './Store';
+import Addcontact from './component/Addcontact';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 
 const App = () => {
-
-    const [addItem, setAddItem] = useState([]); // useState Hooks always dfifne out of fucntion
-    
-    const addNote = (note)=>{
-        // alert("clicked");
-        setAddItem((oldData)=>{
-            return [...oldData, note]    
-        })	
-    };
-
-    const onDelete = (id)=>{
-        setAddItem((oldData)=>{
-            oldData.filter((currentData, ind)=>{  // filter method
-             return ind !== id;
-
-         });   
-        });
-    };
-
+   
     return (
-        <>
-        <Header/>
-        <Filter/>
-        <CreateNote passNote={addNote}/>
-        {
-            addItem && addItem.map((val, index)=>{  // map on addIte array method feacting data 
-               return(
-                    <Note
+      <Provider store={store}>
+        {/* Using Route  */}
+        <BrowserRouter>
+        <Header/>  
+        <div className="container my-5">
+        <Switch>
+          <Route exact path="/" component={Tabledata}/>
+          <Route exact path="/component/add" component={Addcontact}/>
+        </Switch>  
+        </div> 
+        </BrowserRouter>
 
-                    key={index}
-                    id={index}
-                    title={val.title}
-                    content={val.content}
-                    deleteNote={onDelete}
-                    />
-                ); 
-                   
-            })
-        }
-        <Footer/>
-    </>
-
+      </Provider>
     );
- 
+
 
 }
 
