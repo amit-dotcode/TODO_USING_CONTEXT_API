@@ -6,7 +6,6 @@
   
 }
 body{
-    background-color: #efeded;
 
 }
 .br-6{border-radius: 6px;}
@@ -43,7 +42,6 @@ tr:hover .editbox{
 }
 .tableCase.table td, .tableCase.table th {
     vertical-align: middle;
-    border-top: unset;
     border-bottom: unset;
 }
 .main_from{
@@ -117,7 +115,7 @@ tr:hover .editbox{
 
 .darkMood .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #3d3e3f;
+    border-bottom: unset;
 }
 
 .darkMood .table td, .darkMood .table th {
