@@ -16,7 +16,7 @@ export default function Header() {
              <Link to='/component/add' className="ml-auto mr-4">
              <Button variant="light" >Add Contact</Button>
              </Link>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                
             </Navbar>
             </header> 
           

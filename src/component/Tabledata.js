@@ -29,7 +29,7 @@ export default function Tabledata() {
              <Button variant="danger" className="mb-3 clear" onClick ={() => dispatch(clearAllselectedContact())} >Clear All <MdDeleteForever/></Button>
              ): null}
         
-            <Table className="shadow tableCase">
+            <Table  responsive="sm"  className="shadow tableCase table ">
                 <thead className="bg-danger text-white">
                     <tr>
                         <th className="d-flex align-items-center">
@@ -52,17 +52,21 @@ export default function Tabledata() {
                             // desturecontact
                             const { name, phone, email, id  } = contact;
                             return (
-                                <tr key={contact.id}>
+                                <tr key={id}>
                                     <td>
                                     <InputGroup.Checkbox 
                                     aria-label="Checkbox for following "
                                     checked = {selectAll}
+                                    onChange = {()=> setSelectAll(!selectAll)}
+
 
  
 
                                     />   
                                      </td>
-                                    <td><Avatar className="mr-2" name={name} size="45" round={true} />{name}</td>
+                                    <td>
+                                        <Avatar  className="mr-2" name={name} size="45" round={true} />{name}
+                                    </td>
                                     <td>{phone}</td>
                                     <td>{email}</td>
                                     <td className="editbox">
