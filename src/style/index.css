@@ -10,3 +10,178 @@ body{
 }
 .br-6{border-radius: 6px;}
 .br-2{border-radius: 6px 6px 0px 0px;}
+.tableCase .bg-danger, .main_from .bg-danger, .clear {
+    background-color: #ff0057!important;
+}
+.tableCase .text-danger{
+    color:#ff0057!important;
+}
+.tableCase .editbox{
+    opacity: 0;
+    font-size: 20px;
+    transition: 0.3 all;
+}
+tr:hover .editbox{
+    opacity: 1;
+}
+.navbar-primary.bg-primary, .main_from .btn-primary{
+    background-color: #6904ff!important;
+    border-color: unset !important;
+}
+.navbar a {
+    font-size: 20px;
+    text-decoration: none !important;
+}
+.tableCase .input-group-text{
+    display: block;
+    padding: unset;
+    background-color: unset;
+    border: unset;
+    text-align: left;
+
+}
+.tableCase.table td, .tableCase.table th {
+    vertical-align: middle;
+    border-bottom: unset;
+}
+.main_from{
+    width: 550px;
+    margin: 0 auto;
+}
+
+.text-right .custom-control-input:not(:disabled):active~.custom-control-label::before {
+    color: #fff;
+    background-color: #fff;
+    border-color: #a9a9a9;
+}
+.text-right .custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #5d5e5f;
+    background-color: #5d5e5f;
+}
+.text-right .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: unset;
+}
+
+
+/*----Dark-Mood-----*/
+.darkMood{
+    background-color: #3e3e3e;
+    color:#fff
+}
+
+
+.darkMood .navbar-primary.bg-primary {
+    background-color: #3e3c40!important;}
+
+.darkMood .btn-light, .darkMood .btn-light:focus, .darkMood .btn-light:hover, .darkMood .btn-light:active {
+        color: #ffffff !important;
+        background-color: #01A4FF !important;
+        border-color: #01A4FF !important;
+        box-shadow: -2px 1px 10px 2px #01a4ff8f !important;
+}
+
+.darkMood .btn-primary, .darkMood .btn-primary:focus, .darkMood .btn-primary:hover, .darkMood .btn-primary:active {
+    color: #ffffff !important;
+    background-color: #01A4FF !important;
+    border-color: #01A4FF !important;
+    box-shadow: -2px 1px 10px 2px #01a4ff8f !important;
+}
+.darkMood .btn-warning, .darkMood .btn-warning:focus, .darkMood .btn-warning:hover, .darkMood .btn-warning:active {
+    color: #ffffff !important;
+    background-color: #F1900B !important;
+    border-color: #F1900B !important;
+    box-shadow: -2px 1px 10px 2px #f1900b8c !important;
+}
+.darkMood .clear.btn-danger{
+    color: #ffffff !important;
+    background-color: #01A4FF !important;
+    border-color: #01A4FF !important;
+    box-shadow: -2px 1px 10px 2px #01a4ff8f !important;}
+
+
+.darkMood .navbar .text-white {
+    color: #F1900B!important;
+    text-shadow: 1px 0px 11px #f1900b8c;
+}    
+
+.darkMood .table{
+    color:#fff;
+}
+
+.darkMood .tableCase .bg-danger {
+    background-color: #323031!important;
+}
+
+.darkMood .table thead th {
+    vertical-align: bottom;
+    border-bottom: unset;
+}
+
+.darkMood .table td, .darkMood .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #5a5d5f;
+}
+
+.darkMood .editbox .text-dark{
+    color: #fff!important;
+
+}
+
+.darkMood input[value=true]{
+    box-shadow: 1px 1px 9px #42A5F5;
+} 
+.darkMood .title.bg-danger{
+   background-color: #3e3c40!important;
+}
+.darkMood .Form_box{
+    background-color: #424242;
+}
+.darkMood .form-control{
+    background-color: #313131;
+    color:#fff;
+    border: 1px solid #f1900b8c;
+}
+.darkMood .form-control:focus {
+    background-color: #313131;
+    color:#F1900B;
+    border-color: #f1900b8c;
+    outline: 0;
+    box-shadow:unset;
+}
+.darkMood .addon  .form-control{
+    border: 1px solid #00d8ff8a;
+}
+.darkMood .addon .form-control:focus {
+    background-color: #313131;
+    color:#00d8ff;
+    border-color: #00d8ff;
+    outline: 0;
+    box-shadow:unset;
+}
+.darkMood .labeldark{
+    color:#01A4FF;
+    margin-left: 10px;
+    text-shadow: 1px 1px 13px #01a4ffb8;
+
+}
+
+
+/*------MEDIA--------*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .main_from{width:100% ;}
+    .ml-auto.mr-4{margin-right: 0!important;}
+    .table{white-space: nowrap; font-size: 14px;}
+
+ }
