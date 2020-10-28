@@ -1,25 +1,26 @@
 import React from 'react';
-import { Navbar, Button } from 'react-bootstrap';
-import { ImAddressBook } from 'react-icons/im';
-import {Link} from 'react-router-dom';
-
-
+import { Navbar, Nav } from 'react-bootstrap';
+import { NavLink} from 'react-router-dom';
 
 export default function Header() {
     return (
         <>
-           <header>
-           <Navbar collapseOnSelect expand="lg" bg="primary" variant="primary shadow">
-             <Link to="/" className="text-white"><ImAddressBook className="mx-2"/>
-             Contact-Book
-             </Link>
-             <Link to='/component/add' className="ml-auto mr-4">
-             <Button variant="light" >Add Contact</Button>
-             </Link>
-                
+        <header>
+        <Navbar bg="cyanlight" className="shadow navbar-dark" expand="lg">
+            <NavLink to="/">
+            <Navbar.Brand>React-User</Navbar.Brand>
+            </NavLink>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                  <NavLink className="nav-link" exact to="/">Home</NavLink>  
+                  <NavLink className="nav-link" exact to="/about">About</NavLink>  
+                  <NavLink className="nav-link" exact to="/Contact">Contact</NavLink>  
+                </Nav>
+            </Navbar.Collapse>
             </Navbar>
-            </header> 
-          
+        </header>
+         
         </>
     )
 }

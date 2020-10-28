@@ -1,34 +1,36 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/index.css';
-import Header from "./component/Header";
-import Tabledata from './component/Tabledata';
-import SwitchToggle from './component/Switchtoggle';
-import {Provider} from 'react-redux';
-import store from './Store';
-import Addcontact from './component/Addcontact';
-import Editcontact from './component/EditContact';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-
+import Header from './component/Header';
+import Home from './component/Home';
+import About from './component/About';
+import Contact from './component/Contact';
+import NotFound from './component/Not_Found';
+import AddUser from './component/pages/AddUser';
+import EditUser from './component/pages/EditUser';
+import ViewUser from './component/pages/ViewUser';
 
 const App = () => {
    
     return (
-      <Provider store={store}>
-        {/* Using Route  */}
-        <BrowserRouter>
-        <Header/>  
-        <div className="container my-5">
-        <SwitchToggle/>  
+      <>
+      <BrowserRouter>
+        <Header/>
+        <div className="container">
         <Switch>
-          <Route exact path="/" component={Tabledata}/>
-          <Route exact path="/component/add" component={Addcontact}/> 
-          <Route exact path="/component/edit/:id" component={Editcontact}/> 
-        </Switch>  
-        </div> 
-        </BrowserRouter>
-
-      </Provider>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/About" component={About}/>
+          <Route exact path="/Contact" component={Contact}/>
+          <Route exact path="/component/pages/AddUser" component={AddUser}/>
+          <Route exact path="/component/pages/EditUser/:id" component={EditUser}/>
+          <Route exact path="/component/pages/ViewUser/:id" component={ViewUser}/>
+          <Route  component={NotFound}/>
+        </Switch>
+        </div>
+     
+      </BrowserRouter>
+      </>
     );
 
 
