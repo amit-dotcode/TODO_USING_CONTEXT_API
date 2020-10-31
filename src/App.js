@@ -1,15 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/index.css';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Header from './component/Header';
-import Home from './component/Home';
-import About from './component/About';
-import Contact from './component/Contact';
-import NotFound from './component/Not_Found';
-import AddUser from './component/pages/AddUser';
-import EditUser from './component/pages/EditUser';
-import ViewUser from './component/pages/ViewUser';
 
 const App = () => {
    
